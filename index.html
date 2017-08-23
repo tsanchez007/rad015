@@ -18,6 +18,22 @@
 
 <body>
 
+    <script type="text/javascript">
+        function toggleSound() {
+          var audioElem = document.getElementById('audio');
+          if (audioElem.paused)
+          {
+            audioElem.play();
+            document.getElementById("boton").innerHTML = "Pause";
+          }
+          else
+          {
+            audioElem.pause();     
+            document.getElementById("boton").innerHTML = "Play";       
+          }
+        }
+    </script>
+
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -33,16 +49,15 @@
 
     <!-- Full Page Image Background Carousel Header -->
     <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
+       <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-        <!-- Wrapper for Slides -->
-        <center>
+<div class="fb-like" data-href="http://norfipc.com/pagina.html" data-width="292" data-send="true"></div>
 
-        <div class="logo"><a href=""><img src="https://4.bp.blogspot.com/-fzODcwxbGQo/WU7CbvN9moI/AAAAAAAAQ14/ehiAXyt0dSoTJN-qpUp75eT3MwsTPZAkwCPcBGAYYCw/s1600/unnamed.png"  width="85%" height="85%" alt="despedida de soltero soltera en galicia" /></a></div> </center>
+
+        
+        <!-- Wrapper for Slides -->
+        <div id="logo"><a href=""><img src="https://4.bp.blogspot.com/-fzODcwxbGQo/WU7CbvN9moI/AAAAAAAAQ14/ehiAXyt0dSoTJN-qpUp75eT3MwsTPZAkwCPcBGAYYCw/s1600/unnamed.png"  width="202px" height="202px" alt="www.radio309.com" /></a></div>
 
 
         <div class="carousel-inner">
@@ -73,43 +88,64 @@
                 <div class="carousel-caption">
                     <h2></h2>
                 </div>
-            </div>
-        </div>
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
+             </div>
+         </div>
 
-         <!-- Inicio. radio hosting USAstreams.com html5 player -->
-<!-- Licencia: GRATIS-XDF4543ERF -->
-<iframe name="contenedorPlayer" class="cuadroBordeado" width="100%" height="4%" marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no  src="http://hostingcaminointernet.com/reproductores/radioemanuel/radio-player.html"><a href="http://www.usastreams.com/" Alt = "Usastreams.com posicionamiento web, Servicios SEO y SEM, servicios streaming" title="Streaming Para Radio y Tv radio en internet ,Transmisiones de Video por Internet ,Planes de streaming para emisoras de radio ,servicios de streaming profesional,">**</a></iframe>
-<center>
+            <!-- Inicio. radio hosting USAstreams.com html5 player -->
+            <!-- Licencia: GRATIS-XDF4543ERF -->
+            <!-- <iframe name="contenedorPlayer" class="cuadroBordeado" width="100%" height="4%" marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no  src="http://hostingcaminointernet.com/reproductores/radioemanuel/radio-player.html"><a href="http://www.usastreams.com/" Alt = "Usastreams.com posicionamiento web, Servicios SEO y SEM, servicios streaming" title="Streaming Para Radio y Tv radio en internet ,Transmisiones de Video por Internet ,Planes de streaming para emisoras de radio ,servicios de streaming profesional,">**</a></iframe><center> -->
 
-<style type="text/css"> 
+            <audio id="audio" autoplay>
+              <source src="http://vm1.hostingcaminointernet.com:9312/;stream.mp3" type="audio/mpeg">
+            </audio>
+                    
+            <button id="boton" type="button"
+              onclick="javascript:toggleSound();">
+              Pause
+            </button><center>
+
+
+        
+    <style type="text/css"> 
+
+#boton {
+	 position: absolute;
+    width:120px;
+    height:42px;  
+    left:42px; 
+    margin:2%;
+    top:88%;
+    border:2.5px solid#FAFFFA;
+    border-radius:20px;
+    background-color:#00FF00;
+}
+
+#boton:focus
+{
+	outline: 0;
+}
+
+#logo {
+      position: absolute;
+    left:3%;
+    right:8%;
+    top:58%;
+    margin:0 auto;
+    z-index:9999999;
+  }
+   
 .polig{ 
-width:100%; 
-height:25%; 
-background:#000000; 
-font-family:arial; 
-font-weight:bold; 
-color:#5882FA; 
-} 
+    width:100%; 
+    height:25%; 
+    background:#000000; 
+    font-family:arial; 
+    font-weight:bold; 
+    color:#5882FA; 
 
-.logo {
-   position: absolute;
-   left: 0;
-   right: 74%;
-   top: 50%;
-   margin: 0 auto;
-   z-index: 9999999;
 }
 
 </style> 
-<div class="polig"><a><a href="https://www.facebook.com/TaulioSanchez" target="_blank">Copyright © SocialADM 2017</a></a>| Radio309 | Santo Domingo Rep. Dom.</a> | info:829-566-4199 </div>
+<div class="polig"><a href="https://www.facebook.com/TaulioSanchez" target="_blank">Copyright © SocialADM 2017 </a>| Radio309 | Santo Domingo Rep. Dom.</a> | info: 829-566-4199 </div>
     <div class="container">
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -122,7 +158,9 @@ color:#5882FA;
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
-    </script>
+
+
+
 
 </body>
 

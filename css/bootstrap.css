@@ -6748,5 +6748,48 @@ button.close {
     display: none !important;
 
   }
+  
+#playpausebtn {
+  background:url(pausa.png) no-repeat;
+  width:68px;
+  height:68px;
 }
+
+#boton {
+     position: absolute;
+   left: 0 auto;
+   right: 202px;
+   top: 600px ;
+   margin: 0 auto;
+   z-index: 9999999;
+   width:150px;
+   height:34px;
+   border: 2.5px solid #FAFFFA;
+   border-radius: 20px;
+    background-color: #00FF00;
+}
+.polig{ 
+width:100%; 
+height:25%; 
+background:#000000; 
+font-family:arial; 
+font-weight:bold; 
+color:#5882FA; 
+} 
+
+.logo {
+   position: absolute;
+   left: 0;
+   right: 78%;
+   top: 59%;
+   margin: 0 auto;
+   z-index: 9999999;
+}
+
+
+
+
+}
+
+
 /*# sourceMappingURL=bootstrap.css.map */
