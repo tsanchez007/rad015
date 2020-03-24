@@ -75,23 +75,20 @@
             </div>
         </div>
 
-
-
-
-
-    </header>
-   <body><br>
-        <section class="main-section alabaster" id="Nuestro">
+    </header><br>
+    
+   <body>
+        <section class="main-section alabaster" id="Contactos">
 <center>
-        <form method="post" action="enviar.php">
-            <input type="text" name="nombre" placeholder="nombre">
+        <form action="enviar.php" method="post">
+            <input type="text" name="nombre" placeholder="nombre" required>
             <input type="email" name="email" placeholder="correo">
-            <textarea type="texto" name="mensaje" placeholder="mensaje">
-            </textarea>
-            <input type="submit" value="enviar">
+            <textarea name="mensaje" placeholder="mensaje"></textarea>
+            <input type="submit" value="enviar" id="boton">
         </form>
-    </center><br>
+    </center>
 </body>
+<br>
 
      
 
